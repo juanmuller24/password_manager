@@ -45,6 +45,7 @@ def item_menu():
 
 
 if __name__ == "__main__":
+    os.makedirs(path + f"/data", exist_ok=True)
     master_password = input('Enter Master Password: ').encode()
     master_hash = hashlib.sha256(master_password).hexdigest()
     if os.path.exists(path + '/master_hash.txt'):
